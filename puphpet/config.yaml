@@ -185,6 +185,7 @@ mysql:
     install: '1'
     root_password: '123'
     adminer: '1'
+    phpmyadmin: '1'
     databases:
         SLEd3IUYnHfE:
             grant:
