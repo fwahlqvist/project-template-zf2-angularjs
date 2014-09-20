@@ -25,6 +25,8 @@ return array(
         'KapApigility',
         'KapRequireJs',
         'KapNg',
+        'ZfcBase',
+        'ZfcUser',
         'Example'
     ),
     'module_listener_options' => array(
