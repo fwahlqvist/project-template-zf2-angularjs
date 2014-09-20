@@ -37,7 +37,7 @@ __Get a source code__
 Clone it:
 
 ```
-git clone https://github.com/kapitchi/project-template-zf2-angularjs.git myapp
+git clone https://github.com/fwahlqvist/project-template-zf2-angularjs.git myapp
 ```
 
 _OR_
