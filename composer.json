@@ -30,6 +30,7 @@
         "zfcampus/zf-development-mode": "~2.0",
         "kapitchi/kap-require-js": "dev-master",
         "kapitchi/kap-ng": "dev-master",
+        "zf-commons/zfc-user": "dev-master",
         "kapitchi/kap-apigility": "dev-master"
     },
     "require-dev": {
