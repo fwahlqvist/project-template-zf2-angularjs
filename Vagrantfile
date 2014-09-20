@@ -237,42 +237,6 @@ Vagrant.configure("2") do |config|
     config.vagrant.host = data['vagrant']['host'].gsub(":", "").intern
   end
 
-# This assumes php5 and mysql-server are installed somewhere else in the puppet manifests.
-  package { phpmyadmin:
-    ensure => installed,
-    require => Package['php5', 'mysql-server']
-  }
-
-  # Enable access via /phpmyadmin
-  # This assumes apache is installed somewhere else in the Puppet manifests
-  file { '/etc/apache2/sites-enabled/phpmyadmin':
-    ensure  => 'present',
-    content => 'include /etc/phpmyadmin/apache.conf',
-    mode    =>  644,
-    require => [
-      Class['apache::mod::php'],
-      Package['phpmyadmin']
-    ]   
-  }
-
-  # Remove config if it does not include auto-login options
-  exec { 'remove-non-autologin-config':
-    command => 'sudo rm /etc/phpmyadmin/config.inc.php',
-    unless => 'grep "Enable auto-login" /etc/phpmyadmin/config.inc.php',
-    path => ['/bin/', '/usr/bin/'],
-    notify => Exec['download-autologin-config'],
-  }
-
-  # Download gist including auto-login config options. root/root are the assumed credentials
-  # This assumes wget is installed somewhere else in the Puppet manifests
-  exec { 'download-autologin-config':
-    command => 'sudo wget https://gist.github.com/jedihe/6117009/raw/50c64759de0c0b118d785601af88d268822cd828/config-3.4.10.1deb1.inc.php -O /etc/phpmyadmin/config.inc.php',
-    require => [Package['wget'], Exec['remove-non-autologin-config']],
-    creates => '/etc/phpmyadmin/config.inc.php',
-    path => ['/bin/', '/usr/bin/'],
-  }
-
-
 end
 
 
