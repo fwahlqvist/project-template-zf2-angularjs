@@ -4,6 +4,9 @@ cd /vagrant
 echo "Copying default local.php file"
 cp config/autoload/local.php.dist config/autoload/local.php
 
+echo "Copying default local.php file"
+cp config/autoload/session.local.php.dist config/autoload/session.local.php
+
 echo "Running npm ..."
 npm install
 
@@ -15,6 +18,9 @@ bower install
 
 echo "Running compass ..."
 compass compile
+
+echo "Copying default zfcuser file"
+cp ./vendor/zf-commons/zfc-user/config/zfcuser.global.php.dist ./config/autoload/zfcuser.global.php
 
 echo "Running tests PHP/JS ..."
 /vagrant/vendor/bin/phpunit
