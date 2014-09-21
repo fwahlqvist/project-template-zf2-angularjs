@@ -21,4 +21,21 @@ return array(
             'password' => '123',
         ),
     ),
+    'service_manager' => array(
+        'factories' => array(
+            'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory',
+        ),
+    ),
+    'db' => array(
+        'driver'    => 'PdoMysql',
+        'hostname'  => 'localhost',
+        'database'  => 'myapp',
+        'username'  => 'dbuser',
+        'password'  => '123',
+    ),
+    'service_manager' => array(
+        'factories' => array(
+            'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory',
+        ),
+    ),
 );
