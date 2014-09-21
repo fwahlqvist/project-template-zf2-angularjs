@@ -179,3 +179,12 @@ INSERT INTO `oauth_users` (`username`, `password`, `first_name`, `last_name`) VA
 
 COMMIT;
 
+-- -----------------------------------------------------
+-- Data for table `users`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `myapp`;
+INSERT INTO `user` (`user_id`, `username`, `email`, `display_name`, `password`, `state`) VALUES
+(1,	NULL,	'fwahlqvist@gmail.com',	'Fred',	'$2y$14$qaPmykQCuEGo74Us0rY5beohJYCUt6Exv1GoPrnYLAFa0W2/Wv1qW',	NULL);
+
+COMMIT;
