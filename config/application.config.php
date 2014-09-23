@@ -25,6 +25,7 @@ return array(
         'KapApigility',
         'KapRequireJs',
         'KapNg',
+        'ScnSocialAuth',
         'ZfcBase',
         'ZfcUser',
         'Example'
