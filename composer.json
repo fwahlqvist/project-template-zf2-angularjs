@@ -30,8 +30,10 @@
         "zfcampus/zf-development-mode": "~2.0",
         "kapitchi/kap-require-js": "dev-master",
         "kapitchi/kap-ng": "dev-master",
-        "zf-commons/zfc-user": "dev-master",
-        "kapitchi/kap-apigility": "dev-master"
+        "zf-commons/zfc-user": "1.2.*",
+        "kapitchi/kap-apigility": "dev-master",
+        "socalnick/scn-social-auth": "dev-master",
+        "hybridauth/hybridauth": "2.2.*"
     },
     "require-dev": {
         "zendframework/zftool": "dev-master",
